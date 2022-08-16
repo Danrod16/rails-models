@@ -1,0 +1,10 @@
+<h1>Hello from index!</h1>
+<%= link_to "Add new loan 💵", loans_new_path %>
+
+<ul>
+
+<% @loans.each do |loan| %>
+
+  <li>   <%= link_to loan.title, loan_path(loan) %> <%= link_to "Edit", edit_loan_path(loan) %> <%= link_to "🗑", delete_loan_path(loan), method: :delete %> </li>
+<% end %>
+</ul>
